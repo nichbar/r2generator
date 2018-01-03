@@ -7,6 +7,8 @@ group='com.github.nichbar'
 def siteUrl='https://github.com/nichbar/R2GeneratorAndroid'
 def gitUrl='https://github.com/nichbar/R2GeneratorAndroid.git'
 
+version = '1.0.0'
+
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
