@@ -7,7 +7,7 @@ group='com.github.nichbar'
 def siteUrl='https://github.com/nichbar/R2GeneratorAndroid'
 def gitUrl='https://github.com/nichbar/R2GeneratorAndroid.git'
 
-version = '1.0.0_rc1'
+version = '1.0.2'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
@@ -58,17 +58,3 @@ install {
         }
     }
 }
-
-////设置maven deployer
-//uploadArchives {
-//    repositories {
-//        mavenDeployer {
-//            //设置插件的GAV参数
-//            pom.groupId = 'work.nich.plugin'
-//            pom.artifactId = 'r2generator-plugin'
-//            pom.version = 1.0
-//            //文件发布到下面目录
-//            repository(url: uri('../build/r2'))
-//        }
-//    }
-//}
