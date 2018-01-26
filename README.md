@@ -3,7 +3,7 @@ A gradle plugin that generate R2.java for android library.
 
 Inside android library, we usually use`getResources().getIdentifier("res_name", "res_type", "package_name")`to access resources.
 
-This plugin provide an easier way to handle the "res_name" above by generatiting R2.java file during build time.
+This plugin provide an easier way to handle the "res_name" above by generating R2.java file during build time.
 
 Here's a sample of auto generated R2.java :
 
