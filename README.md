@@ -31,7 +31,7 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.github.nichbar:r2generator:1.0.2'
+        classpath 'com.github.nichbar:r2generator:1.0.3'
     }
 }
 ```
