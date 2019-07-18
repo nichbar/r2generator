@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'r2generator-plugin'
+apply plugin: 'r2generator-plugin'
 
 android {
     compileSdkVersion 28
