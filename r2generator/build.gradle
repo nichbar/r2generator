@@ -1,13 +1,10 @@
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
-apply plugin: 'com.github.dcendents.android-maven'
+apply from: 'https://raw.githubusercontent.com/sky-uk/gradle-maven-plugin/master/gradle-mavenizer.gradle'
 
 group='com.github.nichbar'
 
-def siteUrl='https://github.com/nichbar/R2GeneratorAndroid'
-def gitUrl='https://github.com/nichbar/R2GeneratorAndroid.git'
-
-version = '1.0.3'
+version = '1.0.4'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
@@ -16,45 +13,23 @@ dependencies {
     compile localGroovy()
     compileOnly gradleApi()
 
-    implementation 'com.android.tools.build:gradle:3.0.1'
+    implementation 'com.android.tools.build:gradle:3.4.2'
     implementation 'com.github.javaparser:javaparser-core:3.5.7'
-    implementation 'com.squareup:javapoet:1.9.0'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jre8:1.2.10'
+    implementation 'com.squareup:javapoet:1.11.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.31'
 }
 
 repositories {
     mavenCentral()
 }
 
-install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom {
-            project {
-                packaging 'aar'
-                // Add your description here
-                name 'Generate R2.java for android library.'
-                url siteUrl
-                // Set your license
-                licenses {
-                    license {
-                        name 'GPL-3.0'
-                        url 'https://www.gnu.org/licenses/gpl-3.0.en.html'
-                    }
-                }
-                developers {
-                    developer {
-                        id 'nich'
-                        name 'nichbar'
-                        email 'cnichbar@gmail.com'
-                    }
-                }
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-        }
-    }
+project.ext {
+    mavDevelopers = ["Nich":"Nichbar"]
+    mavSiteUrl = "https://github.com/nichbar/r2generator"
+    mavGitUrl = mavSiteUrl + '.git'
+    mavProjectName = 'R2Generator'
+    mavPublishToInternalRepo = true
+    mavRepoInternalUrl = "../build/r2"
+    mavLibraryLicenses = ["GPL-3.0":'https://www.gnu.org/licenses/gpl-3.0.en.html']
+    mavLibraryDescription = "A plugin that generate R2.java for android library."
 }
