@@ -30,6 +30,6 @@ project.ext {
     mavProjectName = 'R2Generator'
     mavPublishToInternalRepo = true
     mavRepoInternalUrl = "../build/r2"
-    mavLibraryLicenses = ["GPL-3.0":'https://www.gnu.org/licenses/gpl-3.0.en.html']
+    mavLibraryLicenses = ["Apache-2.0":'https://github.com/nichbar/r2generator/blob/master/LICENSE']
     mavLibraryDescription = "A plugin that generate R2.java for android library."
 }
